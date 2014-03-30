@@ -1,0 +1,17 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.ctyle
+
+@font-face{
+  font-family:'freestyle';
+    src: url(/assets/fonts/icofonts.eot);
+} 
+
+body{
+	font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+}
+h1{font-family: freestyle, "Trebuchet MS", Arial, sans-serif;}
+header{
+	background:#90dee0;
+	min-height:100px;
+}

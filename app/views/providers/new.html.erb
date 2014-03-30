@@ -1,0 +1,101 @@
+<h1>Add New Provider</h1>
+
+<%= form_for :providers, url: providers_path do |f| %>
+
+  <p>
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </p>
+ 
+  <p>
+    <%= f.label :degree %><br>
+    <%= f.text_field :degree %>
+  </p>
+
+  <p>
+    <%= f.label :practice %><br>
+    <%= f.text_field :practice %>
+  </p>
+
+  <p>
+    <%= f.label :address %><br>
+    <%= f.text_field :address %>
+  </p>
+
+  <p>
+    <%= f.label :address2 , "Address #2" %><br>
+    <%= f.text_field :address2 %>
+  </p>
+
+  <p>
+    <%= f.label :city %><br>
+    <%= f.text_field :city %>
+  </p>
+
+  <p>
+    <%= f.label :state %><br>
+    <%= f.text_field :state %>
+  </p>
+ 
+
+  <p>
+    <%= f.label :zipcode %><br>
+    <%= f.text_field :zipcode %>
+  </p>
+
+  <p>
+    <%= f.label :phone %><br>
+    <%= f.phone_field :phone %>
+  </p>
+
+  <p>
+    <%= f.label :fax %><br>
+    <%= f.phone_field :fax %>
+  </p>
+
+  <p>
+    <%= f.label :email %><br>
+    <%= f.email_field :email %>
+  </p>
+
+  <p>
+    <%= f.label :specialty %><br>
+    <select>
+	  <%= options_for_select([['general practice', 1], ['endoncrinology', 2]]) %>
+	</select>
+  </p>
+
+  <p>
+    <%= f.label :procedures %><br>
+    <select>
+	  <%= options_for_select([['keyhole', 1], ['phalloplasty', 2]]) %>
+	</select>
+  </p>
+
+ <p>
+	<%= f.label :populations %><br>
+	<select name="peoviders_populations">
+	  <%= options_for_select([['Female to Male', 1], ['Male to Female', 2]]) %>
+	</select>
+ </p>
+
+ <p>
+    <%= f.label :insurance, "Accepts Health Insurance?" %>
+    <%= radio_button_tag(:insurance, "yes") %>
+  	<%= label_tag(:insurance_yes, "Yes") %>
+	<%= radio_button_tag(:insurance, "no") %>
+  	<%= label_tag(:insurance_no, "No") %>
+  </p>
+
+  <p>
+  	<%= f.label :slidingScale, "Accepts Sliding Scale?" %>
+    <%= radio_button_tag(:slidingScale, "yes") %>
+  	<%= label_tag(:slidingScale_yes, "Yes") %>
+	<%= radio_button_tag(:slidingScale, "no") %>
+  	<%= label_tag(:slidingScale_no, "No") %>
+  </p>
+
+  
+    <%= f.submit %>
+  </p>
+<% end %>
